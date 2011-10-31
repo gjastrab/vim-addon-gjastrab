@@ -1,0 +1,9 @@
+Personal VAM setup
+
+intended usage:
+ 1. activate "github:gjastrab"
+ 2. after activating the plugin in your .vimrc call the Activate function:
+  call vim_addon_gjastrab#Activate('all')
+
+  or pick a collection of plugins this way:
+  call vim_addon_gjastrab#Activate([...])
