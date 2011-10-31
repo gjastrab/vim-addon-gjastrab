@@ -26,4 +26,4 @@ fun! vim_addon_gjastrab#Activate(vam_features)
         \ ,'mxml' : 'actionscript'
         \ ,'haml' : 'html,javascript'
         \ }}
-endif
+endf
