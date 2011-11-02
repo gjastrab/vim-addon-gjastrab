@@ -28,4 +28,19 @@ fun! vim_addon_gjastrab#Activate(vam_features)
         \ ,'mxml' : 'actionscript'
         \ ,'haml' : 'html,javascript'
         \ }}
+
+  set background=dark
+  colorscheme solarized
+
+  " NERDtree
+  let NERDTreeShowBookmarks=0
+  map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+
+  " Command-T
+  let g:CommandTMaxHeight=20
+  let g:CommandTScanDotDirectories=0
+  set wildmode=list:longest,list:full
+  set wildignore+=*.log,*.o,*.sassc,*.png,*.jpg,*.jpeg,*.gif,*.swf,*.class,*.scssc,*.pdf,public/system/**
+  map <leader>t :CommandT<CR>
+  map <leader>f :CommandTFlush<CR>
 endf
