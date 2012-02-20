@@ -36,6 +36,20 @@ fun! vim_addon_gjastrab#Activate(vam_features)
   let NERDTreeShowBookmarks=0
   map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
+  " Tabular
+  inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+
+  function! s:align()
+    let p = '^\s*|\s.*\s|\s*$'
+    if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+      let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+      let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+      Tabularize/|/l1
+      normal! 0
+      call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+    endif
+  endfunction
+
   " Command-T
   let g:CommandTMaxHeight=20
   let g:CommandTScanDotDirectories=0
