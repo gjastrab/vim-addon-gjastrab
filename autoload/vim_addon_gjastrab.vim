@@ -7,7 +7,7 @@ fun! vim_addon_gjastrab#Activate(vam_features)
   let g:local_vimrc = {'names':['vl_project.vim']}
 
   let plugins = {
-        \ 'always' : ['vim-addon-commenting', 'vim-addon-async', 'vim-addon-git', 'vim-addon-toggle-buffer', 'snipmate-snippets', 'vim-addon-goto-thing-at-cursor', 'Command-T', 'bufexplorer.zip', 'taglist', 'trailing-whitespace'],
+        \ 'always' : ['vim-addon-commenting', 'vim-addon-async', 'vim-addon-git', 'vim-addon-toggle-buffer', 'vim-snippets', 'vim-addon-goto-thing-at-cursor', 'Command-T', 'bufexplorer.zip', 'taglist', 'trailing-whitespace'],
         \ 'normal' : ['surround', 'Solarized', 'The_NERD_tree'],
         \ 'ruby' : ['rails', 'Tabular', 'haml.zip', 'cucumber.zip']
     \ }
